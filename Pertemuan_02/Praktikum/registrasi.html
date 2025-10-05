@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi</title>
+    <style>
+        #header {
+            float: left;
+            width: 100%;
+            background-color: rgb(245, 212, 48);
+            height: 100px;
+            text-align: center;
+        }
+        #menu {
+            float: left;
+            width: 100%;
+            padding: 20px;
+            background-color: rgb(195, 195, 195);
+            height: auto;
+            text-align: center;
+        }
+        #i-side {
+            float: left;
+            width: 20%;
+            background-color: rgb(44, 44, 44);
+            min-height: 400px;
+            text-align: center;
+            color: aliceblue;
+        }
+        #content {
+            float: left;
+            width: 60%;
+            background-color: rgb(116, 234, 255);
+            min-height: 400px;
+            text-align: center;
+        }
+        #r-side {
+            float: left;
+            width: 20%;
+            background-color: rgb(255, 79, 79);
+            min-height: 400px;
+            text-align: center;
+        }
+        #footer {
+            float: left;
+            width: 100%;
+            background-color: rgb(184, 255, 234);
+            min-height: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        Header
+    </div>
+
+    <div id="menu">
+        <a href="beranda.html">Beranda</a>
+        <a href="produk.html">Produk</a>
+        <a href="member.html">Member</a>
+        
+   
+    </div>
+
+    <div id="i-side">
+        Popular
+    </div>
+
+    <div id="content"> 
+        <h3 style="text-align: center;">FORM REGISTRASI</h3>
+        <table>
+            <tr>
+            <td>
+                Nama Lengkap
+            </td><td> : </td> <td><input type="text" name="nama_lengkap"></td>
+            </tr>
+            <tr>
+            <td>
+                Tanggal Lahir
+            </td><td> : </td><td><input type="date" name="tanggal_lahir"></td>
+            </tr>
+            <tr>
+            <td>
+                Jenis Kelamin
+            </td><td> : </td> <td>
+                <input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki
+                <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan
+            </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Alamat
+                </td><td> : </td><td><textarea name="alamat"></textarea></td>
+            </tr>
+            <tr>
+                <td>
+                    Agama
+                </td><td> : </td><td>
+                    <select name="agama">
+                        <option value="islam">Islam</option>
+                        <option value="kristen">Kristen</option>
+                        <option value="hindu">Hindu</option>
+                        <option value="budha">Budha</option>
+                        <option value="konghucu">Konghucu</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Hobi
+                </td><td> : </td><td>
+                    <input type="checkbox" name="hobi" value="membaca"> Membaca
+                    <input type="checkbox" name="hobi" value="menulis"> Menulis
+                    <input type="checkbox" name="hobi" value="bermain"> Bermain
+                    <input type="checkbox" name="hobi" value="berenang"> Berenang
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;" >
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="r-side">
+        Advertise
+    </div>
+
+    <div id="footer">
+        footer
+    </div>
+</body>
+</html>
