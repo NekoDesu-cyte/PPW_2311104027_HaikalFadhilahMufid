@@ -1,0 +1,84 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+}
+
+/* Carousel image height */
+.carousel img {
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Responsive carousel for mobile */
+@media (max-width: 768px) {
+  .carousel img {
+    height: 300px;
+  }
+}
+
+/* Custom hover effect for product cards */
+.card:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
+/* Recommendation section */
+aside h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+/* Footer text */
+footer p {
+  font-size: 14px;
+  color: #000;
+}
+
+/* --- Recommendation Section (Bigger Size) --- */
+aside {
+  background-color: #fff8f8;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.recommendation-card {
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.recommendation-card img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.recommendation-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recommendation-card .card-body {
+  padding: 1.5rem;
+}
+
+.recommendation-card .card-text {
+  font-size: 1.2rem;
+}
+
+.recommendation-card .text-danger {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 992px) {
+  aside {
+    margin-top: 40px;
+  }
+
+  .recommendation-card img {
+    height: 240px;
+  }
+}

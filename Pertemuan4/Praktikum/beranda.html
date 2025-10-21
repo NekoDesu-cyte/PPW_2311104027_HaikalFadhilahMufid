@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BikeShop</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="bg-danger text-white py-3">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="m-0" style="font-family: 'Poppins', sans-serif">BikeShop</h1>
+        <nav>
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="Login.html" class="nav-link text-white">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="Member.html" class="nav-link text-white">Member</a>
+            </li>
+            <li class="nav-item">
+              <a href="Beranda.html" class="nav-link text-white">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a href="Produk.html" class="nav-link text-white">Produk</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CAROUSEL -->
+    <div id="bikeCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="./Assets/banner1.jpg"
+            class="d-block w-100"
+            alt="Banner 1"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./Assets/banner2.jpg"
+            class="d-block w-100"
+            alt="Banner 2"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./Assets/banner3.jpg"
+            class="d-block w-100"
+            alt="Banner 3"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="container my-5">
+      <div class="row g-4">
+        <!-- PRODUK -->
+        <div class="col-lg-8">
+          <div class="row g-4">
+            <!-- Item 1 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                <img
+                  src="./Assets/mountainbike2.jpg"
+                  class="card-img-top"
+                  alt="Bike 2"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Specialized Stumpjumper Comp Carbon 29
+                  </h5>
+                  <p class="card-text text-danger fw-bold">IDR 85.000.000</p>
+                  <button class="btn btn-danger">Beli Sekarang</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                <img
+                  src="./Assets/mountainbike3.jpg"
+                  class="card-img-top"
+                  alt="Bike 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Trek Fuel EX 9.8 GX</h5>
+                  <p class="card-text text-danger fw-bold">IDR 78.500.000</p>
+                  <button class="btn btn-danger">Beli Sekarang</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                <img
+                  src="./Assets/mountainbike4.jpg"
+                  class="card-img-top"
+                  alt="Bike 4"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Polygon Collosus 9</h5>
+                  <p class="card-text text-danger fw-bold">IDR 92.750.000</p>
+                  <button class="btn btn-danger">Beli Sekarang</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                <img
+                  src="./Assets/mountainbike5.jpg"
+                  class="card-img-top"
+                  alt="Bike 5"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Polygon Siskiu T7</h5>
+                  <p class="card-text text-danger fw-bold">IDR 32.500.000</p>
+                  <button class="btn btn-danger">Beli Sekarang</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                <img
+                  src="./Assets/roadbike2.jpg"
+                  class="card-img-top"
+                  alt="Bike 6"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Cannondale SuperSix EVO Hi-MOD 1 SRAM RED AXS
+                  </h5>
+                  <p class="card-text text-danger fw-bold">IDR 70.000.000</p>
+                  <button class="btn btn-danger">Beli Sekarang</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                <img
+                  src="./Assets/roadbike3.jpg"
+                  class="card-img-top"
+                  alt="Bike 7"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Giant TCR Advanced Di2</h5>
+                  <p class="card-text text-danger fw-bold">IDR 57.857.000</p>
+                  <button class="btn btn-danger">Beli Sekarang</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RECOMMENDATION -->
+        <aside class="col-lg-4">
+          <h3 class="mb-3 text-center">Recommendation</h3>
+
+          <div class="recommendation-card card mb-4">
+            <img
+              src="./Assets/mountainbike1.jpg"
+              class="card-img-top"
+              alt="Bike 1"
+            />
+            <div class="card-body text-center">
+              <p class="card-text mb-1 fw-medium fs-5">
+                Giant Anthem Advanced 29 1
+              </p>
+              <p class="text-danger fw-bold fs-5">IDR 97.500.000</p>
+              <button class="btn btn-danger">Beli Sekarang</button>
+            </div>
+          </div>
+
+          <div class="recommendation-card card">
+            <img
+              src="./Assets/roadbike1.jpg"
+              class="card-img-top"
+              alt="Bike 2"
+            />
+            <div class="card-body text-center">
+              <p class="card-text mb-1 fw-medium fs-5">
+                Polygon Helios A9X TCG "Black"
+              </p>
+              <p class="text-danger fw-bold fs-5">IDR 81.000.000</p>
+              <button class="btn btn-danger">Beli Sekarang</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-light text-center py-3">
+      <p class="m-0">&copy; 2025 BikeShop. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
