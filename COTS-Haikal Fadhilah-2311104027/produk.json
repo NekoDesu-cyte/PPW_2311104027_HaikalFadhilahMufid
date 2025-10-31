@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nama": "Polygon Helios A9X Entity WR5",
+    "harga": "IDR 80.000.000",
+    "gambar": "./Assets/HeliosA9XWR.png"
+  },
+  {
+    "id": 2,
+    "nama": "Polygon Helios A8 Di2 PowerMeter",
+    "harga": "IDR 74.000.000",
+    "gambar": "./Assets/HeliosA8Di2.png"
+  },
+  {
+    "id": 3,
+    "nama": "Polygon A8X",
+    "harga": "IDR 60.500.000",
+    "gambar": "./Assets/HeliosA8x.png"
+  },
+  {
+    "id": 4,
+    "nama": "Polygon Helios A7 Di2",
+    "harga": "IDR 49.000.000",
+    "gambar": "./Assets/HeliosA7Di2.png"
+  },
+  {
+    "id": 5,
+    "nama": "Polygon Helios A7X",
+    "harga": "IDR 45.000.000",
+    "gambar": "./Assets/HeliosA7x.png"
+  },
+  {
+    "id": 6,
+    "nama": "Polygon Helios A8",
+    "harga": "IDR 43.000.000",
+    "gambar": "./Assets/HeliosA8.png"
+  }
+]

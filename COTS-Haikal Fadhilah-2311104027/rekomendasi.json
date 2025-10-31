@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "nama": "Polygon Helios A9 Di2 PowerMeter",
+    "harga": "IDR 95.000.000",
+    "gambar": "./Assets/HeliosA9Di2.png"
+  },
+  {
+    "id": 2,
+    "nama": "Polygon Helios A0 AXS",
+    "harga": "IDR 125.000.000",
+    "gambar": [
+      "./Assets/HeliosA0AXS.png",
+      "./Assets/HeliosA0AXSside1.png",
+      "./Assets/HeliosA0AXSside2.png",
+      "./Assets/HeliosA0AXSside3.png"
+    ]
+  }
+]

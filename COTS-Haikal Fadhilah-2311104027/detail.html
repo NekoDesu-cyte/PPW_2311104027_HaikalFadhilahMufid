@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Produk - BikeShop</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      footer {
+        margin-top: auto;
+      }
+
+      .carousel-item img {
+        object-fit: cover;
+        height: 400px;
+      }
+
+      @media (max-width: 768px) {
+        .carousel-item img {
+          height: 250px;
+        }
+
+        h2.display-5 {
+          font-size: 1.8rem;
+        }
+
+        p.fs-2 {
+          font-size: 1.3rem !important;
+        }
+
+        button#Cart {
+          font-size: 1rem;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="bg-danger text-white py-3">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="m-0" style="font-family: 'Poppins', sans-serif">BikeShop</h1>
+        <nav>
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="Login.html" class="nav-link text-white">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="Member.html" class="nav-link text-white">Member</a>
+            </li>
+            <li class="nav-item">
+              <a href="Beranda.html" class="nav-link text-white">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a href="Produk.html" class="nav-link text-white">Produk</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container my-5">
+      <div class="mb-4">
+        <a href="index.html" class="btn btn-outline-dark">
+          &larr; Kembali ke Beranda
+        </a>
+      </div>
+
+      <div class="row g-5 align-items-center">
+        <!-- IMAGE SLIDER -->
+        <div class="col-lg-6 col-md-12">
+          <div
+            id="productCarousel"
+            class="carousel slide shadow-sm rounded"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <!-- indikator diisi lewat JS -->
+            </div>
+
+            <div class="carousel-inner rounded">
+              <!-- gambar diisi lewat JS -->
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#productCarousel"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#productCarousel"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT INFO -->
+        <div class="col-lg-6 col-md-12">
+          <h2 class="display-5 fw-bold" style="font-family: 'Poppins', sans-serif">
+            Nama Produk Sepeda
+          </h2>
+
+          <p class="text-danger fw-bold fs-2 my-3">IDR 99.999.000</p>
+
+          <h4 class="mt-5">Deskripsi Barang</h4>
+          <p class="text-justify" id="deskripsi">
+            Deskripsi produk akan segera hadir.
+          </p>
+
+          <div class="d-grid mt-4">
+            <button id="Cart" class="btn btn-danger btn-lg py-3">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-light text-center py-3">
+      <p class="m-0">&copy; 2025 BikeShop, by Haikal Fadhilah - 2311104027</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        const id = localStorage.getItem("selectedId");
+        const tipe = localStorage.getItem("selectedType");
+        if (!id) return;
+
+        const file = tipe === "rekomendasi" ? "rekomendasi.json" : "produk.json";
+
+        fetch(file)
+          .then((res) => res.json())
+          .then((data) => {
+            const produk = data.find((item) => item.id == id);
+            if (!produk) return;
+
+            // Update nama, harga, dan deskripsi
+            $("main h2").text(produk.nama);
+            $("main .text-danger").text(produk.harga);
+            if (produk.deskripsi) $("#deskripsi").text(produk.deskripsi);
+
+            // Carousel
+            const carouselInner = $(".carousel-inner");
+            const carouselIndicators = $(".carousel-indicators");
+
+            carouselInner.empty();
+            carouselIndicators.empty();
+
+            const gambarList = Array.isArray(produk.gambar)
+              ? produk.gambar
+              : [produk.gambar];
+
+            gambarList.forEach((src, index) => {
+              const activeClass = index === 0 ? "active" : "";
+
+              carouselIndicators.append(`
+                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="${index}"
+                  class="${activeClass}" aria-label="Slide ${index + 1}"></button>
+              `);
+
+              carouselInner.append(`
+                <div class="carousel-item ${activeClass}">
+                  <img src="${src}" class="d-block w-100 img-fluid rounded shadow-sm" alt="${produk.nama} - ${index + 1}">
+                </div>
+              `);
+            });
+          });
+
+        // Notifikasi Add to Cart
+        $("#Cart").on("click", function () {
+          $("<div class='alert alert-success position-fixed bottom-0 end-0 m-3 shadow'>Produk berhasil ditambahkan ke keranjang!</div>")
+            .appendTo("body")
+            .delay(2000)
+            .fadeOut(500, function () {
+              $(this).remove();
+            });
+        });
+      });
+    </script>
+  </body>
+</html>
